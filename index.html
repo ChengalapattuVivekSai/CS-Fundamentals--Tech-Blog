@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Engineering Knowledge Base</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="main-shell">
+    <div class="bg-grid" aria-hidden="true"></div>
+    <aside class="main-sidebar glass-panel">
+      <div class="logo-wrap">
+        <span class="logo-dot"></span>
+        <div>
+          <p class="label">Engineering OS</p>
+          <h1>Knowledge Base</h1>
+        </div>
+      </div>
+      <nav class="side-nav" aria-label="Primary">
+        <a class="active" href="index.html">Dashboard</a>
+        <a href="COA/index.html">COA</a>
+        <a href="OS/index.html">OS</a>
+        <a href="Networking/index.html">Networking</a>
+        <a href="DBMS/index.html">DBMS</a>
+        <a href="DSA/index.html">DSA</a>
+        <a href="System-Design/index.html">System Design</a>
+        <a href="AI/index.html">AI</a>
+      </nav>
+      <p class="side-footer">Build your personal engineering second brain.</p>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar glass-panel">
+        <div>
+          <p class="label">Workspace</p>
+          <h2>Engineering Knowledge Dashboard</h2>
+        </div>
+        <div class="topbar-actions">
+          <button id="themeToggle" class="btn-pill" type="button" aria-label="Toggle theme">
+            <span>Theme</span>
+          </button>
+        </div>
+      </header>
+
+      <section class="hero glass-panel">
+        <h3>Structured Learning, Built for Engineers</h3>
+        <p>
+          This multi-page knowledge base is designed to scale across core computer science domains.
+          Start with the complete COA module system and expand day by day.
+        </p>
+        <a class="btn-primary" href="COA/index.html">Open COA Learning Hub</a>
+      </section>
+
+      <section class="tech-grid" aria-label="Technology Sections">
+        <article class="tech-card active">
+          <p class="tag">Available</p>
+          <h4>Computer Organization &amp; Architecture</h4>
+          <p>Complete modules, topics, progress tracker, notes, and detail viewer.</p>
+          <a href="COA/index.html">Enter COA</a>
+        </article>
+        <article class="tech-card">
+          <p class="tag soon">Coming Soon</p>
+          <h4>Operating Systems</h4>
+          <p>Process management, memory, scheduling, synchronization, and internals.</p>
+          <a href="OS/index.html">Preview</a>
+        </article>
+        <article class="tech-card">
+          <p class="tag soon">Coming Soon</p>
+          <h4>Networking</h4>
+          <p>TCP/IP, routing, protocols, distributed communication, and reliability.</p>
+          <a href="Networking/index.html">Preview</a>
+        </article>
+        <article class="tech-card">
+          <p class="tag soon">Coming Soon</p>
+          <h4>DBMS</h4>
+          <p>Storage engines, indexing, transactions, normalization, and query planning.</p>
+          <a href="DBMS/index.html">Preview</a>
+        </article>
+        <article class="tech-card">
+          <p class="tag soon">Coming Soon</p>
+          <h4>DSA</h4>
+          <p>Data structures, algorithm patterns, complexity strategy, and optimizations.</p>
+          <a href="DSA/index.html">Preview</a>
+        </article>
+        <article class="tech-card">
+          <p class="tag soon">Coming Soon</p>
+          <h4>System Design</h4>
+          <p>Scalability, architectures, consistency patterns, and tradeoff thinking.</p>
+          <a href="System-Design/index.html">Preview</a>
+        </article>
+        <article class="tech-card">
+          <p class="tag soon">Coming Soon</p>
+          <h4>Generative AI</h4>
+          <p>LLM systems, RAG architecture, prompt design, and AI product engineering.</p>
+          <a href="AI/index.html">Preview</a>
+        </article>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

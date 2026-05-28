@@ -3,31 +3,120 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Operating Systems | Engineering Knowledge Base</title>
+    <title>OS Learning Hub | Engineering Knowledge Base</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../COA/style.css" />
   </head>
   <body>
-    <main class="coming-main">
-      <section class="coming-card glass-panel">
-        <p class="label">Operating Systems</p>
-        <h1>Coming Soon</h1>
-        <p>
-          This section is reserved for future expansion of your engineering knowledge base.
-          Continue with COA for now and grow the system module by module.
-        </p>
-        <div>
-          <a href="../index.html">Back to Dashboard</a>
-          <span> | </span>
-          <a href="../COA/index.html">Open COA</a>
+    <div class="coa-grid-bg" aria-hidden="true"></div>
+
+    <div class="app-shell">
+      <aside class="sidebar glass" id="sidebar">
+        <div class="brand">
+          <span class="brand-led"></span>
+          <div>
+            <p class="kicker">Engineering OS</p>
+            <h1>Knowledge Base</h1>
+          </div>
         </div>
-      </section>
-    </main>
-    <script src="../script.js"></script>
+
+        <nav class="nav-links" aria-label="Knowledge sections">
+          <a href="../index.html">Dashboard</a>
+          <a href="../COA/index.html">COA</a>
+          <a href="index.html" class="active">OS</a>
+          <a href="../Networking/index.html">Networking</a>
+          <a href="../DBMS/index.html">DBMS</a>
+          <a href="../DSA/index.html">DSA</a>
+          <a href="../System-Design/index.html">System Design</a>
+          <a href="../AI/index.html">AI</a>
+        </nav>
+
+        <div class="sidebar-note">
+          <p class="kicker">Current Focus</p>
+          <p>Operating Systems, Linux internals, system programming, and runtime behavior.</p>
+        </div>
+      </aside>
+
+      <button class="sidebar-backdrop" id="sidebarBackdrop" type="button" aria-label="Close sidebar"></button>
+
+      <main class="workspace">
+        <header class="topbar glass">
+          <button
+            id="mobileNavToggle"
+            class="icon-btn"
+            type="button"
+            aria-label="Toggle sidebar"
+            aria-expanded="false"
+          >
+            Menu
+          </button>
+          <div class="title-wrap">
+            <p class="kicker">Learning Dashboard</p>
+            <h2>Operating Systems</h2>
+          </div>
+          <div class="top-actions">
+            <label class="search-wrap" for="topicSearch">
+              <input id="topicSearch" type="search" placeholder="Search modules or topics..." autocomplete="off" />
+            </label>
+            <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle theme">Theme</button>
+          </div>
+        </header>
+
+        <section class="stats" id="statsRow" aria-label="OS progress stats">
+          <article class="stat-card glass">
+            <p class="kicker">Modules</p>
+            <h3 id="statModules">0</h3>
+          </article>
+          <article class="stat-card glass">
+            <p class="kicker">Topics</p>
+            <h3 id="statTopics">0</h3>
+          </article>
+          <article class="stat-card glass">
+            <p class="kicker">Completed</p>
+            <h3 id="statCompleted">0</h3>
+          </article>
+          <article class="stat-card glass">
+            <p class="kicker">Progress</p>
+            <h3 id="statProgress">0%</h3>
+          </article>
+        </section>
+
+        <section class="main-layout" aria-label="OS content layout">
+          <article class="modules-panel glass">
+            <div class="panel-head">
+              <h3>OS Modules</h3>
+              <p id="searchMeta" class="meta">Showing complete roadmap</p>
+            </div>
+            <div id="modulesAccordion" class="accordion" role="tree"></div>
+          </article>
+
+          <article class="detail-panel glass" id="detailPanel">
+            <div id="topicDetail" class="detail-empty">
+              <h3>Select a Topic</h3>
+              <p>Choose any OS topic to inspect its module, file path, Linux angle, and study focus.</p>
+            </div>
+          </article>
+
+          <aside class="notes-panel glass">
+            <div class="panel-head">
+              <h3>Study Notes</h3>
+              <p class="meta">Quick revision memory</p>
+            </div>
+            <form id="noteForm" class="note-form">
+              <textarea id="noteInput" rows="3" placeholder="Add a quick OS note..." required></textarea>
+              <button type="submit">Add Note</button>
+            </form>
+            <div id="notesList" class="notes-list"></div>
+          </aside>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
